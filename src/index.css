@@ -1,0 +1,114 @@
+@import "tailwindcss";
+
+/* ===== FULLSCREEN FOUNDATION ===== */
+html,
+body,
+#root {
+  height: 100%;
+  min-height: 100%;
+  width: 100%;
+}
+
+/* ===== YOUTUBE STYLE VARIABLES ===== */
+:root {
+  --yt-bg: #0f0f0f;
+  --yt-surface: #181818;
+  --yt-hover: #272727;
+  --yt-border: #303030;
+  --yt-text: #f1f1f1;
+  --yt-subtext: #aaaaaa;
+
+  font-family: system-ui, -apple-system, sans-serif;
+  color: var(--yt-text);
+  background: var(--yt-bg);
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ===== BODY ===== */
+body {
+  margin: 0;
+  overflow-x: hidden;
+  background: var(--yt-bg);
+}
+
+/* ===== ROOT (REMOVE CENTERED PAGE LOOK) ===== */
+#root {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  max-width: none;
+  min-height: 100vh;
+  display: block;
+  box-sizing: border-box;
+  text-align: left;
+  border: 0;
+}
+
+/* ===== SCROLLBAR (YOUTUBE STYLE) ===== */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-thumb {
+  background: #2a2a2a;
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #3a3a3a;
+}
+
+/* ===== BUTTON INTERACTIONS ===== */
+button {
+  transition: all 0.2s ease;
+}
+button:hover {
+  transform: scale(1.02);
+}
+
+/* ===== SIDEBAR HOVER ===== */
+aside button:hover {
+  background: var(--yt-hover);
+}
+
+/* ===== CARD HOVER (SongCard) ===== */
+.card-hover:hover {
+  background: var(--yt-hover);
+  transform: translateY(-2px);
+  transition: 0.2s ease;
+}
+
+/* ===== VIDEO PLAYER CONTAINER ===== */
+.video-section {
+  background: #000;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+/* ===== UP NEXT SCROLL ===== */
+.up-next {
+  max-height: calc(100vh - 120px);
+  overflow-y: auto;
+  padding-right: 4px;
+}
+
+/* ===== TEXT ===== */
+h1,
+h2 {
+  font-weight: 500;
+  color: var(--yt-text);
+}
+
+p {
+  margin: 0;
+}
+
+/* ===== CODE (keep safe minimal styling) ===== */
+code {
+  font-family: monospace;
+  font-size: 14px;
+  padding: 4px 6px;
+  border-radius: 4px;
+  background: #1f1f1f;
+  color: #ddd;
+}
